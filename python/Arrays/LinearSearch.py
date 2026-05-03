@@ -23,12 +23,7 @@ from typing import List
 class Solution:
     def linear_search(self, nums: List[int], target: int) -> int:
         # TODO: Implement this.
-        result = -1
-        for i in range(len(nums)):
-            if nums[i] == target:
-                return i
-        
-        return -1
+        pass
 
 
 class TestLinearSearch(unittest.TestCase):
