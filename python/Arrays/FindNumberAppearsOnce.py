@@ -21,7 +21,11 @@ from typing import List
 class Solution:
     def single_number(self, nums: List[int]) -> int:
         # TODO: Implement this.
-            
+        solution = 0
+
+        for item in nums:
+            solution = solution ^ item
+        return solution    
         
 
 
