@@ -21,7 +21,17 @@ from typing import List
 class Solution:
     def remove_duplicates(self, nums: List[int]) -> int:
         # TODO: Implement this.
-        pass
+
+        n = len(nums)
+        if n == 0: return 0
+
+        j = 1
+        for i in range(1, n):
+            if nums[i] != nums[j - 1]:
+                nums[j] = nums[i]
+                j += 1
+
+        return j
 
 
 class TestRemoveDuplicatesFromSortedArray(unittest.TestCase):
