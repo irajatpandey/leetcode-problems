@@ -24,7 +24,17 @@ from typing import List
 class Solution:
     def left_rotate_by_one(self, nums: List[int]) -> List[int]:
         # TODO: Implement this.
-        pass
+        
+        n = len(nums)
+        if n == 0: 
+            return nums
+        
+        start = nums[0]
+        for i in range(n):
+            nums[i] = nums[(i + 1)%n]
+        
+        nums[n - 1] = start
+        return nums
 
 
 class TestLeftRotateArrayByOne(unittest.TestCase):
