@@ -19,9 +19,25 @@ from typing import List
 
 
 class Solution:
+
+    def reverse(self, nums: List[int], start: int, end: int):
+        while start < end:
+            nums[start], nums[end] = nums[end], nums[start]
+            start += 1
+            end -= 1
+
+
     def left_rotate_by_k(self, nums: List[int], k: int) -> List[int]:
-        # TODO: Implement this.
-        pass
+        if len(nums) == 0:
+            return nums
+        
+        n = len(nums)
+        k = k % n
+        self.reverse(nums, 0, k - 1)
+        self.reverse(nums, k, n - 1)
+        self.reverse(nums, 0, n - 1)
+
+        return nums
 
 
 class TestLeftRotateArrayByKPlaces(unittest.TestCase):
