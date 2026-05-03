@@ -21,7 +21,18 @@ from typing import List
 class Solution:
     def find_max_consecutive_ones(self, nums: List[int]) -> int:
         # TODO: Implement this.
-        pass
+        maxSoFar = 0
+        current_max = 0
+        n = len(nums)
+
+        for i in range(n):
+            if nums[i] == 1: 
+                current_max += 1
+                maxSoFar = max(current_max, maxSoFar)
+            else:
+                current_max = 0
+
+        return maxSoFar
 
 
 class TestMaximumConsecutiveOnes(unittest.TestCase):
