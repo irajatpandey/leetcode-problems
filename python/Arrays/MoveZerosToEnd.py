@@ -21,7 +21,21 @@ from typing import List
 class Solution:
     def move_zeroes(self, nums: List[int]) -> List[int]:
         # TODO: Implement this.
-        pass
+
+        n = len(nums)
+        if n == 0:
+            return nums
+        
+        non_zero_index = 0
+        for i in range(n):
+            if nums[i] != 0:
+                nums[i], nums[non_zero_index] = nums[non_zero_index], nums[i]
+                non_zero_index += 1
+            
+            
+
+
+        return nums
 
 
 class TestMoveZerosToEnd(unittest.TestCase):
