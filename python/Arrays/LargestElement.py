@@ -5,7 +5,12 @@ from typing import List
 class Solution:
     def largest_element(self, nums: List[int]) -> int:
         # TODO: Implement this.
-        pass
+        larget_element = float('-inf')
+        for ele in nums:
+            if ele > larget_element:
+                larget_element = ele
+        return larget_element
+    
 
 
 class TestLargestElement(unittest.TestCase):
