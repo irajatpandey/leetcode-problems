@@ -20,10 +20,35 @@ from typing import List
 
 class Solution:
     def find_union(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        # TODO: Implement this.
+        m = len(nums1)
+        n = len(nums2)
+        merged = []
 
-    
-        pass
+        i, j = 0, 0
+
+        while i < m and j < n:
+            if nums1[i] <= nums2[j]:
+                value = nums1[i]
+                i += 1
+            else:
+                value = nums2[j]
+                j += 1
+
+            if not merged or merged[-1] != value:
+                merged.append(value)
+
+        while i < m:
+            if not merged or merged[-1] != nums1[i]:
+                merged.append(nums1[i])
+            i += 1
+
+        while j < n:
+            if not merged or merged[-1] != nums2[j]:
+                merged.append(nums2[j])
+            j += 1
+
+        return merged
+
 
 
 class TestUnionOfTwoSortedArrays(unittest.TestCase):
