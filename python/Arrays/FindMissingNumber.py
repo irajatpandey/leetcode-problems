@@ -21,7 +21,11 @@ from typing import List
 class Solution:
     def missing_number(self, nums: List[int]) -> int:
         # TODO: Implement this.
-        pass
+        n = len(nums)
+        total = sum(nums)
+        actual_sum = n * (n + 1) // 2
+        
+        return actual_sum - total
 
 
 class TestFindMissingNumber(unittest.TestCase):
