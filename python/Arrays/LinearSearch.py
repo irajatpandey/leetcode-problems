@@ -2,6 +2,24 @@ import unittest
 from typing import List
 
 
+# Problem: Linear Search
+# Given an array of integers and a target value, return the index of the
+# first occurrence of the target in the array.
+#
+# If the target is not present, return -1.
+#
+# Examples:
+# Input: nums = [4, 2, 7, 1, 9], target = 7
+# Output: 2
+#
+# Input: nums = [4, 2, 7, 1, 9], target = 3
+# Output: -1
+#
+# Constraints:
+# - The array may be empty.
+# - If the target appears multiple times, return its first index.
+
+
 class Solution:
     def linear_search(self, nums: List[int], target: int) -> int:
         # TODO: Implement this.

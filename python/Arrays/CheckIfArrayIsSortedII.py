@@ -2,6 +2,28 @@ import unittest
 from typing import List
 
 
+# Problem: Check if the Array is Sorted II
+# Given an array nums, return True if the array was originally sorted in
+# non-decreasing order and then rotated some number of positions.
+# Otherwise, return False.
+#
+# A sorted array may be rotated zero times, so an already sorted array is valid.
+#
+# Examples:
+# Input: nums = [3, 4, 5, 1, 2]
+# Output: True
+#
+# Input: nums = [2, 1, 3, 4]
+# Output: False
+#
+# Input: nums = [1, 2, 3, 4, 5]
+# Output: True
+#
+# Constraints:
+# - The array will contain at least one element.
+# - Duplicate values may be present.
+
+
 class Solution:
     def check(self, nums: List[int]) -> bool:
         # TODO: Implement this.

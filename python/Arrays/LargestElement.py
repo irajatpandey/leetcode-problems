@@ -2,6 +2,21 @@ import unittest
 from typing import List
 
 
+# Problem: Largest Element
+# Given an array of integers, return the largest element in the array.
+#
+# Examples:
+# Input: nums = [1, 8, 7, 56, 90]
+# Output: 90
+#
+# Input: nums = [-10, -3, -45, -1]
+# Output: -1
+#
+# Constraints:
+# - The array will contain at least one element.
+# - Elements can be positive, negative, or zero.
+
+
 class Solution:
     def largest_element(self, nums: List[int]) -> int:
         # TODO: Implement this.

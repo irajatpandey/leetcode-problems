@@ -2,6 +2,25 @@ import unittest
 from typing import List
 
 
+# Problem: Left Rotate Array by One
+# Given an array of integers, rotate the array to the left by one position
+# and return the rotated array.
+#
+# In a left rotation by one, the first element moves to the end, and every
+# other element shifts one position to the left.
+#
+# Examples:
+# Input: nums = [1, 2, 3, 4, 5]
+# Output: [2, 3, 4, 5, 1]
+#
+# Input: nums = [7]
+# Output: [7]
+#
+# Constraints:
+# - The array may be empty.
+# - Preserve all original elements in their rotated order.
+
+
 class Solution:
     def left_rotate_by_one(self, nums: List[int]) -> List[int]:
         # TODO: Implement this.
