@@ -19,8 +19,20 @@ import unittest
 
 class Solution:
     def remove_outer_parentheses(self, s: str) -> str:
-        # TODO: Implement this.
-        pass
+        ans = ""
+        depth = 0
+
+        for char in s:
+            if char == '(':
+                if depth > 0:
+                    ans += char
+                depth += 1
+            else:
+                depth -= 1
+                if depth > 0:
+                    ans += char
+
+        return ans
 
 
 class TestRemoveOutermostParentheses(unittest.TestCase):
